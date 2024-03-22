@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Tracker Website Flowchart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .node {
+            width: 150px;
+            height: 50px;
+            background-color: #4CAF50;
+            /* Green /      border: 2px solid #333;      border-radius: 5px;      display: flex;      align-items: center;      justify-content: center;      cursor: pointer;      position: relative;    }    .node:hover {      background-color: #8BC34A; / Light green */
+        }
+
+        .arrow {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="node" style="top: 50px; left: 100px;">Fitness</div>
+    <div class="node" style="top: 50px; left: 300px; background-color: #FF5722;">Profile</div>
+    <div class="node" style="top: 150px; left: 200px; background-color: #2196F3;">Workouts</div>
+    <div class="node" style="top: 250px; left: 100px; background-color: #FFC107;">Progress</div>
+    <div class="node" style="top: 250px; left: 300px; background-color: #9C27B0;">Settings</div>
+    <div class="node" style="top: 150px; left: 100px; background-color: #FF9800;">Nutrition</div> <svg width="400" height="300">
+        <line x1="125" y1="75" x2="275" y2="75" stroke="#333" stroke-width="2" />
+        <line x1="200" y1="75" x2="200" y2="125" stroke="#333" stroke-width="2" />
+        <line x1="200" y1="175" x2="125" y2="225" stroke="#333" stroke-width="2" />
+        <line x1="200" y1="175" x2="275" y2="225" stroke="#333" stroke-width="2" />
+    </svg>
+    <script>
+        document.querySelectorAll('.node').forEach(node => {
+                    node.addEventListener('click', () => {
+                                alert(You clicked on $ {
+                                    node.textContent
+                                }); // You can add logic here to navigate to the corresponding page      });    });  
+    </script>
+</body>
